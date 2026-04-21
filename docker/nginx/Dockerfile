@@ -1,5 +1,5 @@
 # Partim de la imatge oficial de Nginx
-FROM nginx:latest
+FROM nginx:alpine
 
 # Copiem la nostra pàgina HTML dins el contenidor
 COPY index.html /usr/share/nginx/html/index.html
