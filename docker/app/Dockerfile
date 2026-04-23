@@ -4,6 +4,12 @@ FROM python:3.11-alpine
 # Directori de treball dins del container
 WORKDIR /app
 
+# Copiamos dependencias
+COPY requirements.txt .
+
+# Instalamos librerías
+RUN pip install --no-cache-dir -r requirements.txt
+
 # Copia els fitxers
 COPY app.py .
 
