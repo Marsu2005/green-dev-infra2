@@ -4,6 +4,9 @@ FROM python:3.11-alpine
 # Directori de treball dins del container
 WORKDIR /app
 
+# Instal·lem curl per als healthchecks
+RUN apk add --no-cache curl
+
 # Copiamos dependencias
 COPY requirements.txt .
 
