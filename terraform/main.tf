@@ -17,10 +17,10 @@ resource "kubernetes_config_map" "app_config" {
   }
 
   data = {
-    APP_PORT    = var.app_port
-    DB_HOST     = var.db_host
-    DB_PORT     = var.db_port
-    POSTGRES_DB = var.postgres_db
+    APP_PORT      = var.app_port
+    DB_HOST       = var.db_host
+    DB_PORT       = var.db_port
+    POSTGRES_DB   = var.postgres_db
     POSTGRES_USER = var.postgres_user
   }
 }
