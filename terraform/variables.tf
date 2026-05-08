@@ -7,7 +7,7 @@ variable "app_port" {
 variable "backend_image" {
   description = "Backend Docker image"
   type        = string
-  default     = "marcalfigueras/simple-app-gsx:v3"
+  default = "marcalfigueras/simple-app-gsx:v4"
 }
 
 variable "backend_replicas" {
@@ -19,7 +19,7 @@ variable "backend_replicas" {
 variable "nginx_image" {
   description = "Nginx Docker image"
   type        = string
-  default     = "marcalfigueras/nginx-gsx:v3"
+  default = "marcalfigueras/nginx-gsx:v4"
 }
 
 variable "nginx_replicas" {
