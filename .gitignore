@@ -6,3 +6,8 @@ kubectl
 minikube-linux-amd64
 kubectl
 minikube-linux-amd64
+
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
