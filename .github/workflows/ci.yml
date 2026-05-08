@@ -39,11 +39,11 @@ jobs:
         with:
           context: ./docker/app
           push: true
-          tags: marcalfigueras/simple-app-gsx:${{ github.sha }}
+          tags: marcalfigueras/simple-app-gsx:v4
 
       - name: Build and push nginx image
         uses: docker/build-push-action@v6
         with:
           context: ./docker/nginx
           push: true
-          tags: marcalfigueras/nginx-gsx:${{ github.sha }}
+          tags: marcalfigueras/nginx-gsx:v4
