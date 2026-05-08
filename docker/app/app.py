@@ -39,7 +39,7 @@ class MyHandler(BaseHTTPRequestHandler):
         if self.path == "/" or self.path == "/students":
             try:
                 students = get_students()
-                response = "\n".join([f"{student[0]} - {student[1]}" for student in students])
+                response = "CI/CD updated version\n" + "\n".join([f"{student[0]} - {student[1]}" for student in students])
 
                 self.send_response(200)
                 self.send_header("Content-type", "text/plain; charset=utf-8")
