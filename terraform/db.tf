@@ -82,7 +82,7 @@ resource "kubernetes_deployment" "db" {
 
           liveness_probe {
             exec {
-              command = ["pg_isready", "-U", var.postgres_user]
+              command = ["pg_isready", "-U", var.postgres_user, "-d", var.postgres_db]
             }
 
             initial_delay_seconds = 15
@@ -91,7 +91,7 @@ resource "kubernetes_deployment" "db" {
 
           readiness_probe {
             exec {
-              command = ["pg_isready", "-U", var.postgres_user]
+              command = ["pg_isready", "-U", var.postgres_user, "-d", var.postgres_db]
             }
 
             initial_delay_seconds = 5
